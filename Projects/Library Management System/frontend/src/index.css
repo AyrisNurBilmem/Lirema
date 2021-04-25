@@ -1,0 +1,208 @@
+body {
+  text-align: center;
+  color : white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* general container*/
+.strat-con{
+  display: flex;
+}
+
+
+
+/*right side START*/
+.welcome{
+  font-family: 'Julius Sans One', sans-serif;
+  padding-bottom : 70px;
+
+}
+.start{
+  padding-top:20px;
+}
+.start-label{
+  padding-right: 1rem;
+  font-size: 15px;
+  font-weight: 500;
+}
+.start-input{
+  font-size: 15px;
+  background-color: #5b8a72;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom-color: white;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  transition: 0.4s ease-in-out;
+  color: white;
+}
+.start-input::placeholder{
+  color:#e7e9da;
+}
+.start-input:hover{
+  cursor:pointer;
+}
+.start-input:focus{
+  outline:none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom-color: #e7e9da;
+
+  transition: 0.4s ease-in-out;
+}
+
+/* login button*/
+
+.login-btn{
+  display: flex;
+  border-style: solid;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+
+  color:#5b8a72;
+  background-color: rgb(255, 253, 253);
+  border-radius:100px;
+  font-size: 17px;
+  font-weight: 800;
+
+
+  position:absolute;
+  text-align: center;
+  cursor: pointer;
+  width:100%;
+  padding-left: 40%;
+  padding-bottom:4%;
+  padding-top:4%;
+  margin-top:15px;
+
+
+  transition: 0.4s ease-in-out;
+
+}
+
+.login-btn:hover{
+  background-color: #e7e9da;
+  color: #5b8a72;
+  
+  border-color: #e7e9da;
+  transition: 0.4s ease-in-out;
+  box-shadow: none;
+}
+
+.login-btn:active{
+  transform: translateY(4px);
+  background-color:#ffffff;
+  border-color:#ffffff;
+  transition: 0.1s;
+  
+}
+
+.no-account{
+  padding-top:150px;
+}
+
+.register-p{
+  padding-top: 15px;
+}
+
+.start-register{
+  border:none;
+  border-bottom:solid;
+  outline:none;
+  padding-top: 15px;
+
+  cursor:pointer;
+  background-color:#5b8a72 ;
+  font-size: 1rem;
+
+  color:#02475e;
+  transition: 0.3s;
+}
+.start-register:hover{
+  color:honeydew;
+  transition: 0.5s;
+  
+}
+
+
+/*left side START*/
+/* Split the screen in half */
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: #faf9f9;
+ 
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: #5b8a72;
+  
+ 
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  
+}
+.centered img {
+  width: 550px;
+  
+}
+
+
+/************************************************Register Page ********************************************************************/
+.password{
+  padding-right:20px;
+
+}
+.address{
+  display: inline-block;
+  padding-right:33px;
+  vertical-align:top;
+}
+.email{
+  padding-right:53px;
+}
+.register-btn{
+   padding-left: 25%;
+}
+.textarea::placeholder{
+  font-family: 'Montserrat', sans-serif;
+  top: 0px;
+  font-size: 14px;
+  position: absolute;
+  z-index: 1;
+  -webkit-transition: all ease-out 0.5s;
+  transition: all ease-out 0.5s;
+
+  font-weight: bold;
+  
+
+}
+
+
+/*                  MEDIA         */
+@media only screen and (max-width:1100px){
+  .start-con{
+    flex-direction: column;
+  }
+}

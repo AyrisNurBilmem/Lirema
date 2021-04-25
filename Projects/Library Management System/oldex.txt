@@ -1,0 +1,32 @@
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import List from "./components/List";
+import Form from "./components/Form";
+import './App.css';
+
+function App() {
+  
+  const [library, setLibrary] = useState("Nothing here yet");
+
+  async function fetchData(){
+    await axios({
+      method: "get",
+      url: "http://localhost:5000",
+      responseType: "stream",
+    }).then(response =>setLibrary(response.data));
+  }
+
+  useEffect( ()=>{
+    fetchData();
+  }, []);
+
+  return (
+    <div className="App">
+      <header className="App-header">  
+          <h1>{library}</h1>
+          <Form />
+          <List />
+      </header>
+    </div>
+  );
+}
