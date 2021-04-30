@@ -7,6 +7,7 @@ import ViewBooks from "./components/pages/ViewBooks";
 import Checkout from "./components/pages/Checkout";
 import Deadlines from "./components/pages/Deadlines";
 import History from "./components/pages/History";
+import EachBook from "./components/books/EachBook";
 
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
         <Switch>
           <Route path="/" exact component={Start}/>
           <Route path="/register" component={Register}/>
-          <Route path="/home" component={Home}/>
+          <Route path="/home" exact component={Home}/>
+          <Route path ="/home/:id" component = {EachBook}/>
           <Route path="/viewbooks" exact component={ViewBooks} />
           <Route path="/checkout" exact component={Checkout}/>
           <Route path="/deadlines" exact component={Deadlines}/>

@@ -1,0 +1,79 @@
+
+/*  **************************  TOP   ******************************    */
+.main-div{
+    color: black;
+    padding-bottom: 85px;
+   
+}
+
+.main-title{
+    font-size: 2rem;
+}
+
+.main-author{
+    font-size: 1rem;
+    margin-top: 1%;
+    font-style: italic;
+    color: #71a17a;
+}
+
+.line{
+    height:5px;
+    background-color: #5b8a72;
+    color: #5b8a72;
+    width:5%;
+    margin: auto;
+    margin-top: 1.75%
+
+}
+
+
+.eachbook-img{
+    height: 325px;
+    border:solid rgba(0, 0, 0, 0.048);
+    border-width: 1px;
+    transition: 0.4s;
+    margin: 4% auto;
+    margin-bottom: 2.5%;
+
+}
+
+
+/*  **************************  BOTTOM   ******************************    */
+.sub-div{
+    color: black;
+    
+}
+
+.left-eachbook{
+    width: 65%;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+.left-eachbook-p-top{
+    font-weight: 900;
+    font-size: 1.15rem;
+    padding-bottom: 20px;
+}
+
+.left-eachbook-p-bottom{
+    line-height: 1.75;
+}
+
+.right-small{
+    display: inline-block;
+    margin-top:3%;
+    margin-bottom: 6%;
+    
+    font-weight: 800;
+    text-align: center;
+    color: #5b8a72;
+    padding: 25px;
+}
+
+.right-eachbook-tp{
+    padding: 12px;
+    color: #02475e;
+    align-items: top;
+}

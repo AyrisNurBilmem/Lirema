@@ -1,16 +1,18 @@
 import React from "react"
-import {Link} from "react-router-dom"
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import axios from "axios"
 import Sidebar from "../sidebar/Sidebar"
+import Books from "../books/Books"
 import "./pages.css"
 
 
 function Home(){
     return (
-        <>
-            <Sidebar />
-           <h1 className="pagesh1">Home Page</h1>
-        </>
+        <div className="home-div">
+          <Sidebar />
+          <h1 className ="home-h1">Search Books</h1>
+           <Books/>
+          
+        </div>
     )
 }
 
