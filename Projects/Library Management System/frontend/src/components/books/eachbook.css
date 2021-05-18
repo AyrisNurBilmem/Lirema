@@ -39,6 +39,82 @@
 }
 
 
+.add-button{
+    border-radius: 40px;
+    padding: 10px;
+    padding-right: 5px;
+    padding-left: 23px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    position: absolute;
+    top: 17.5%;
+    left: 61%;
+    -webkit-transition: width 0.5s;
+
+    border: none;
+    outline:none;
+    background-color: #DA3539;
+    color:white;
+
+    font-size: 20px;
+    
+    cursor:pointer;
+    transition: 0.3s;
+
+}
+.view{
+    position: absolute;
+    top:25%;
+    padding-right: 5px;
+    padding-left: 23px;
+
+    background-color: #02475e;
+
+}
+
+.home{
+    position: absolute;
+    top:32.5%;
+   
+    padding-right: 5px;
+    padding-left: 23px;
+
+    background-color: #71a17a;
+}
+
+
+
+.add-button:active{
+    transform: translateY(4px);
+    transition: 0.4s;
+}
+
+.add-button-txt{
+
+}
+
+.add-button .add-button-txt{
+ max-width: 0;
+  display: inline-block;
+  -webkit-transition: color .15s .15s, max-width 2s;
+  transition: color .15s .15s, max-width 2s;
+  vertical-align: top;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #fff;
+
+  font-size: 15px;
+}
+.add-button:hover .add-button-txt {
+    border-radius: 100px;
+    max-width: 300px;
+    color: white;
+  }
+
+
+
 /*  **************************  BOTTOM   ******************************    */
 .sub-div{
     color: black;

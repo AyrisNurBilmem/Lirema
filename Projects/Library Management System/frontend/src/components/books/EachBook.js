@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react"
 import axios from "axios"
+import {Link} from "react-router-dom"
 import Sidebar from "../sidebar/Sidebar"
 import "./eachbook.css"
 import * as BsIcons from "react-icons/bs"
@@ -7,10 +8,27 @@ import * as FiIcons from "react-icons/fi"
 import * as MdIcons from "react-icons/md"
 import * as FaIcons from "react-icons/fa"
 import * as VscIcons from "react-icons/vsc"
+import * as AiIcons from "react-icons/ai"
 import {IconContext} from "react-icons"
 
 
 function EachBook({match}){
+
+    const [newBook,setNewBook] = useState({});
+    const newB = "newBook";
+
+    const addNewBook = async () =>{
+        await axios.post("http://localhost:3001/viewBooks",{
+            book:newBook,
+        }).then(function(response){
+            console.log(response)
+        })
+        .catch(function(error){
+            console.log(error);
+        });
+        console.log(newBook);
+        }
+
     const [books, setBook]=useState({});
     const [img, setImage] = useState({});
     const [textSnippet, setTextsnippet] = useState({});
@@ -22,8 +40,9 @@ function EachBook({match}){
         setBook(result.data.items[0].volumeInfo);
         setImage(result.data.items[0].volumeInfo.imageLinks)
         setTextsnippet(result.data.items[0].searchInfo);
+        setNewBook(result.data.items[0].id);
         console.log(result.data.items[0].volumeInfo);
-        console.log(result.data)
+        console.log(result.data);
     }
 
     useEffect(() => {
@@ -37,7 +56,15 @@ function EachBook({match}){
         <div>
            <Sidebar />
            
+           <button className =  "add-button" onClick = {()=> addNewBook()}><AiIcons.AiOutlinePlus /><span className = "add-button-txt">Add New Book </span></button>
+           <Link to ="/viewbooks">
+           <button className = "add-button view" ><FaIcons.FaBook /><span className = "add-button-txt">View Books </span></button>
+           </Link>
+           <Link to ="/home">
+           <button className = "add-button home" ><AiIcons.AiOutlineHome /><span className = "add-button-txt">Go Home  </span></button>
+           </Link>
            <img className = "eachbook-img" src = {(img.thumbnail != null) ? img.thumbnail : "No Img Found for this Book"}/>
+           
            <div className ="main-div">
                 <h1 className = "main-title">{(books.title != null) ? books.title : "No Title for This Book" }</h1> 
                 <hr className ="line"/>
@@ -52,7 +79,7 @@ function EachBook({match}){
                 <div className ="right-small">
                     <p className ="right-eachbook-tp">Published Date</p>
                     <BsIcons.BsCalendar size ={30}/>
-                    <p className ="right-eachbook-tp">{(books.pubishedDate != null) ?  books.pubishedDate : "Not Mentioned"} </p>
+                    <p className ="right-eachbook-tp">{(books.publishedDate != null) ?  books.publishedDate : "Not Mentioned"} </p>
                 </div>
                 <div className ="right-small">
                     <p className ="right-eachbook-tp">Publisher</p>
