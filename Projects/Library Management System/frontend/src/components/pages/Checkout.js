@@ -22,8 +22,7 @@ function Checkout() {
    }
 
    const deleteBook = async () =>{
-    await axios.post("http://localhost:3001/checkout", {book:input});
-   
+    await axios.post("http://localhost:3001/checkout", {book:input,});
 
        }
     

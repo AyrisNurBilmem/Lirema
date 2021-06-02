@@ -6,7 +6,7 @@ function Deadlines(){
     return(
         <div>
             <Sidebar />
-            <h1 className="pagesh1">Deadline</h1>
+            <h1 className="home-h1">Deadlines</h1>
         </div>
     )
 }
