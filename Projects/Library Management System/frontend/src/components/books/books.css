@@ -124,3 +124,62 @@
     transform: translateY(6px);
     transition: 0.4s;
 }
+/*                         NOT FOUND                                                   */
+
+.notfound-p{
+    color: #71a17a;
+    font-size: 1.45rem;
+    padding: 25px;
+    padding-bottom: 50px;
+    
+}
+
+.notfound-btn{
+    border: none;
+    outline: none;
+
+    border-radius: 100px;
+    padding: 12px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    font-size: 1.10rem;
+    background-color: #5b8a72;
+    color: whitesmoke;
+    cursor: pointer;
+
+    transition: 0.4s;
+}
+
+.notfound-btn:hover{
+    background-color: #9ABFA1;
+    color: #fff;
+}
+
+.notfound-btn:active{
+    transform: translateY(6px);
+    transition: 0.4s;
+}
+.request-book{
+    border: none;
+    outline: none;
+
+    border-radius: 100px;
+    padding: 12px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    font-size: 1.10rem;
+   
+    color: whitesmoke;
+    cursor: pointer;
+
+    transition: 0.4s;
+    background-color: #DA3539;
+
+}
+.icon{
+  padding-top: 5px;
+  font-size: 20px;
+   
+}

@@ -63,7 +63,7 @@ function EachBook({match}){
            <Link to ="/home">
            <button className = "add-button home" ><AiIcons.AiOutlineHome /><span className = "add-button-txt">Go Home  </span></button>
            </Link>
-           <img className = "eachbook-img" src = {(img.thumbnail != null) ? img.thumbnail : "No Img Found for this Book"}/>
+           <img className = "eachbook-img" src = {(books != undefined && img.thumbnail != null) ? img.thumbnail : "No Img Found for this Book"}/>
            
            <div className ="main-div">
                 <h1 className = "main-title">{(books.title != null) ? books.title : "No Title for This Book" }</h1> 

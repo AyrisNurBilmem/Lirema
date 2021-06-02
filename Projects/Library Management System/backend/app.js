@@ -8,7 +8,8 @@ app.use(cors());
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
-const books = ["kotPYEqx7kMC","FzVjBgAAQBAJ"];
+let books = ["kotPYEqx7kMC","FzVjBgAAQBAJ"];
+let checkedOutBooks = [];
 
 app.get("/getBooks", function(req,res){
     res.send(books);
@@ -21,6 +22,20 @@ app.post("/viewBooks", function(req, res){
 
     
 })
+
+app.post("/checkout", function(req, res){
+    const {book} = req.body;
+    books = books.filter(bookID => {
+        console.log(book);
+        console.log(bookID);
+        bookID != book
+    });
+    console.log(books);
+
+    checkedOutBooks.push(book);
+    console.log(checkedOutBooks);
+
+});
 
 app.listen(3001, function(){
     console.log("Server is now running on port 3001.");

@@ -1,11 +1,14 @@
 import React from "react"
 import {Link} from "react-router-dom";
+import NotFound from "./NotFound";
+
 
 function Booklist({books}){
     return(
         <div>
-            {
-                books.map((item,index) =>{
+            {   books ?
+                (books && books.map((item,index) =>{
+                  
                    return(
                        
                  <div key={index} className = "grid-container">
@@ -24,7 +27,8 @@ function Booklist({books}){
               </div>
               
             </div> )
-            })
+            }) ) 
+            : <NotFound />
             }
         </div>
     )
