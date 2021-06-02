@@ -2,9 +2,8 @@ import React, {useState, useEffect} from "react"
 import axios from "axios"
 import "../books/books.css"
 
-const CheckoutBooks = ({id}) => {
+function ViewHistory({id}) {
     const [books, setBooks] = useState({});
-    const [bookID, setBookID] = useState({});
 
     useEffect(() => {
         fetchBooks();
@@ -15,7 +14,6 @@ const CheckoutBooks = ({id}) => {
          `${"https://www.googleapis.com/books/v1/volumes"}?q=${id}}`
         );
         setBooks(result.data.items[0].volumeInfo);
-        setBookID(result.data.items[0]);
         console.log(result.data.items[0]);
         
     }
@@ -29,11 +27,9 @@ const CheckoutBooks = ({id}) => {
             <div className ="text-div">
             <p className ="book-text"><strong>{books && books.title}</strong></p>
             <p className = "book-text author">{books && books.authors}</p>
-            <p className = "overdue">Overdue Fine: None</p>
-            <p className = "bookID"><strong>Book ID:</strong> {bookID && bookID.id}</p>
             </div>
         </div>
     )
 }
 
-export default CheckoutBooks;
+export default ViewHistory

@@ -25,7 +25,7 @@ const ViewEachBook = ({id}) => {
                     src={`http://books.google.com/books/content?id=${id}&printsec=frontcover&img=1&zoom=1&source=gbs_api`}
                     />
             <div className ="text-div">
-            <p className ="book-text">{books && books.title}</p>
+            <p className ="book-text"><strong>{books && books.title}</strong></p>
             <p className = "book-text author">{books && books.authors}</p>
             </div>
         </div>

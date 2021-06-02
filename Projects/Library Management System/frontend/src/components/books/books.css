@@ -183,3 +183,17 @@
   font-size: 20px;
    
 }
+/*    ************************   CHECKOUT BOOKS   ************************************    */
+.overdue{
+    color: green;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    font-size:0.90rem;
+}
+
+.bookID{
+    color: black;
+    font-size: 0.95rem;
+    padding-top:10px;
+    padding-bottom:20px;
+}

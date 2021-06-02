@@ -9,7 +9,7 @@ function SearchID(props){
         <div className = "search-div">
           <form onSubmit= {props.submitHandler}>
               <input className= "search-box" type= "search" placeholder ="Enter book id" onChange={props.handleInput} value= {props.input}></input>
-              <button className = "search-button" type="submit"><FiIcons.FiTrash size="21px" /></button>
+              <button className = "search-button" type="submit"><FiIcons.FiLogOut size="21px" /></button>
           </form>
 
         </div>
