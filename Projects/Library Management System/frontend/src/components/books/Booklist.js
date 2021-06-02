@@ -22,7 +22,7 @@ function Booklist({books}){
                    </Link>
                    <div className = "text-div">
                   <h3 className= "book-text" >{item.volumeInfo.title}</h3>
-                  <p className= "book-text author"> {item.volumeInfo.authors}</p>
+                  <p className= "book-text author"> <strong>{(item.volumeInfo.authors != null) ? item.volumeInfo.authors: "No Author for This Book"}</strong></p>
                 </div>
               </div>
               
@@ -33,6 +33,5 @@ function Booklist({books}){
         </div>
     )
 }
-
 
 export default Booklist;

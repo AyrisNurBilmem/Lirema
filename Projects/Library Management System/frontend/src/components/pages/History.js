@@ -10,7 +10,7 @@ function History(){
 
 
     const getBooksFromLocalBackend =  async () =>{
-        const result = await axios.get("http://localhost:3001/getBooks");
+        const result = await axios.get("http://localhost:3001/history");
         console.log(result.data);
         setBooklist(result.data);
     }

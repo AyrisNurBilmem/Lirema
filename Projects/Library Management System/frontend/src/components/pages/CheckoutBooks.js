@@ -28,7 +28,7 @@ const CheckoutBooks = ({id}) => {
                     />
             <div className ="text-div">
             <p className ="book-text"><strong>{books && books.title}</strong></p>
-            <p className = "book-text author">{books && books.authors}</p>
+            <p className = "book-text author"><strong>{(books.authors != null) ? books.authors : "No Author for This Book"}</strong></p>
             <p className = "overdue">Overdue Fine: None</p>
             <p className = "bookID"><strong>Book ID:</strong> {bookID && bookID.id}</p>
             </div>

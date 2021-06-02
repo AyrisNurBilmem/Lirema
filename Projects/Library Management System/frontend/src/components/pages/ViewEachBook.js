@@ -26,7 +26,7 @@ const ViewEachBook = ({id}) => {
                     />
             <div className ="text-div">
             <p className ="book-text"><strong>{books && books.title}</strong></p>
-            <p className = "book-text author">{books && books.authors}</p>
+            <p className = "book-text author"><strong>{(books.authors != null) ? books.authors : "No Author for This Book"}</strong></p>
             </div>
         </div>
     )

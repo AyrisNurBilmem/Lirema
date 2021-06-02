@@ -33,8 +33,9 @@ app.post("/checkout", function(req, res){
 
 });
 
-app.post("/history", function(req, res){
-    console.log("Checked Out Books");
+app.get("/history", function(req,res){
+    res.send(checkedOutBooks);
+    console.log("Checked out Books");
 })
 
 app.listen(3001, function(){
